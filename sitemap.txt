@@ -1,2 +1,6 @@
-http://aaaxiaoka.github.io/2023/05/22/hello-world/
+http://aaaxiaoka.github.io/categories/index.html
+http://aaaxiaoka.github.io/tags/index.html
+http://aaaxiaoka.github.io/hexo-next/
 http://aaaxiaoka.github.io/
+http://aaaxiaoka.github.io/tags/first-commit/
+http://aaaxiaoka.github.io/categories/first-commit/
