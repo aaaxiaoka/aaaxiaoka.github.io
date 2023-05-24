@@ -1,3 +1,5 @@
+http://aaaxiaoka.github.io/gallery/index.html
+http://aaaxiaoka.github.io/gallery/bkg/index.html
 http://aaaxiaoka.github.io/categories/index.html
 http://aaaxiaoka.github.io/tags/index.html
 http://aaaxiaoka.github.io/hexo-next/
