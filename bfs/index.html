@@ -21,31 +21,33 @@
     var CONFIG = {"hostname":"aaaxiaoka.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="记录平淡生活,邮箱1047539295@qq.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="烁说博客">
-<meta property="og:url" content="http://aaaxiaoka.github.io/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="BFS">
+<meta property="og:url" content="http://aaaxiaoka.github.io/bfs/index.html">
 <meta property="og:site_name" content="烁说博客">
-<meta property="og:description" content="记录平淡生活,邮箱1047539295@qq.com">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://aaaxiaoka.github.io/images/bfs.png">
+<meta property="article:published_time" content="2023-05-26T05:49:10.000Z">
+<meta property="article:modified_time" content="2023-05-26T05:49:10.000Z">
 <meta property="article:author" content="aashuo">
-<meta property="article:tag" content="日常,学习,记录">
+<meta property="article:tag" content="code">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://aaaxiaoka.github.io/images/bfs.png">
 
-<link rel="canonical" href="http://aaaxiaoka.github.io/">
+<link rel="canonical" href="http://aaaxiaoka.github.io/bfs/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>烁说博客</title>
+  <title>BFS | 烁说博客</title>
   
 
 
@@ -160,9 +162,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -178,10 +181,9 @@
       <meta itemprop="name" content="烁说博客">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/bfs/" class="post-title-link" itemprop="url">BFS</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          BFS
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -213,114 +215,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <img src="/images/bfs.png" width="400" height = "300">
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/bfs/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+        <img src="/images/bfs.png" width="400" height = "300">
+<span id="more"></span>
+
+<h3 id="1091-二进制矩阵中的最短路径"><a href="#1091-二进制矩阵中的最短路径" class="headerlink" title="1091.二进制矩阵中的最短路径"></a>1091.二进制矩阵中的最短路径</h3><p>BFS的模板题，只需要添加八个方向，每次增加一层,到终点时结束即可。</p>
+<figure class="highlight java"><figcaption><span>asd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">   <span class="type">int</span>[][] dir = &#123;&#123;-<span class="number">1</span>,-<span class="number">1</span>&#125;,&#123;-<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;-<span class="number">1</span>,<span class="number">1</span>&#125;,&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">0</span>,-<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,-<span class="number">1</span>&#125;,&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">1</span>,<span class="number">1</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">shortestPathBinaryMatrix</span><span class="params">(<span class="type">int</span>[][] grid)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(grid[<span class="number">0</span>][<span class="number">0</span>] == <span class="number">1</span>)<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        Deque&lt;<span class="type">int</span>[]&gt; que = <span class="keyword">new</span> <span class="title class_">ArrayDeque</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">m</span> <span class="operator">=</span> grid.length,n = grid[<span class="number">0</span>].length;</span><br><span class="line">        <span class="type">boolean</span>[][] used = <span class="keyword">new</span> <span class="title class_">boolean</span>[grid.length][grid[<span class="number">0</span>].length];</span><br><span class="line">        used[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        que.add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;<span class="number">0</span>,<span class="number">0</span>&#125;);</span><br><span class="line">        <span class="keyword">while</span>(!que.isEmpty())&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> que.size();</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">while</span> (size--&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> que.peek()[<span class="number">0</span>];</span><br><span class="line">                <span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> que.poll()[<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">if</span> (x == m-<span class="number">1</span> &amp;&amp; y ==n-<span class="number">1</span> )&#123;</span><br><span class="line">                    <span class="keyword">return</span> count;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span>[] ints : dir) &#123;</span><br><span class="line">                    <span class="type">int</span> <span class="variable">nextX</span> <span class="operator">=</span> x+ints[<span class="number">0</span>];</span><br><span class="line">                    <span class="type">int</span> <span class="variable">nextY</span> <span class="operator">=</span> y+ints[<span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">if</span>(nextX&lt;<span class="number">0</span> || nextY&lt;<span class="number">0</span> || nextX&gt;=m || nextY&gt;=n || used[nextX][nextY] || grid[nextX][nextY] == <span class="number">1</span>)&#123;</span><br><span class="line">                        <span class="keyword">continue</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    que.add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;nextX,nextY&#125;);</span><br><span class="line">                    used[nextX][nextY] = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/code/" rel="tag"># code</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://aaaxiaoka.github.io/hexo-next/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="aashuo">
-      <meta itemprop="description" content="记录平淡生活,邮箱1047539295@qq.com">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="烁说博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/hexo-next/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-22 11:29:18" itemprop="dateCreated datePublished" datetime="2023-05-22T11:29:18+08:00">2023-05-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-23 11:29:18" itemprop="dateModified" datetime="2023-05-23T11:29:18+08:00">2023-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/first-commit/" itemprop="url" rel="index"><span itemprop="name">first commit</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <!-- ![](/images/test.png) -->
-<img src="/images/test.png" width="60%">
-
-<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/hexo-next/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/hexo-next/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -373,6 +301,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1091-%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84"><span class="nav-number">1.</span> <span class="nav-text">1091.二进制矩阵中的最短路径</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
