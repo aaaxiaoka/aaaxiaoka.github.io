@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://aaaxiaoka.github.io/hexo-next/</loc>
+    
+    <lastmod>2023-05-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://aaaxiaoka.github.io/gallery/bkg/index.html</loc>
     
     <lastmod>2023-05-24</lastmod>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>http://aaaxiaoka.github.io/</loc>
-    <lastmod>2023-05-24</lastmod>
+    <lastmod>2023-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -57,7 +66,14 @@
   
   <url>
     <loc>http://aaaxiaoka.github.io/tags/first-commit/</loc>
-    <lastmod>2023-05-24</lastmod>
+    <lastmod>2023-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://aaaxiaoka.github.io/tags/code/</loc>
+    <lastmod>2023-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -66,7 +82,14 @@
   
   <url>
     <loc>http://aaaxiaoka.github.io/categories/first-commit/</loc>
-    <lastmod>2023-05-24</lastmod>
+    <lastmod>2023-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://aaaxiaoka.github.io/categories/LeetCode/</loc>
+    <lastmod>2023-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

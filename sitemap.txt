@@ -1,3 +1,4 @@
+http://aaaxiaoka.github.io/hexo-next/
 http://aaaxiaoka.github.io/gallery/bkg/index.html
 http://aaaxiaoka.github.io/gallery/index.html
 http://aaaxiaoka.github.io/categories/index.html
@@ -5,4 +6,6 @@ http://aaaxiaoka.github.io/tags/index.html
 http://aaaxiaoka.github.io/hexo-next/
 http://aaaxiaoka.github.io/
 http://aaaxiaoka.github.io/tags/first-commit/
+http://aaaxiaoka.github.io/tags/code/
 http://aaaxiaoka.github.io/categories/first-commit/
+http://aaaxiaoka.github.io/categories/LeetCode/
