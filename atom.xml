@@ -6,7 +6,7 @@
   <link href="http://aaaxiaoka.github.io/atom.xml" rel="self"/>
   
   <link href="http://aaaxiaoka.github.io/"/>
-  <updated>2023-05-26T05:49:10.000Z</updated>
+  <updated>2023-05-27T13:19:57.000Z</updated>
   <id>http://aaaxiaoka.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录最困难的一次跑步</title>
+    <link href="http://aaaxiaoka.github.io/527%E8%B7%91%E6%AD%A5/"/>
+    <id>http://aaaxiaoka.github.io/527%E8%B7%91%E6%AD%A5/</id>
+    <published>2023-05-27T13:19:57.000Z</published>
+    <updated>2023-05-27T13:19:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="只要还没停下，就还没有输"><a href="#只要还没停下，就还没有输" class="headerlink" title="只要还没停下，就还没有输"></a>只要还没停下，就还没有输</h2><span id="more"></span><p>今天天气比较闷热，加上15天没跑步了，跑起步来感觉没劲，步子迈不开，闷热的天气让我不停的流汗，总感觉有一部分心理的因素，让我觉得自己跑不起来。不管怎样，心里一直想着上次看跑马拉松的选手到最后的样子，他们是42.5公里，而我只是5公里，哈哈。</p><p>只要我还没有停下，和那些参赛选手相比我也还没输。精神胜利。五公里跑完的最后真的是跑步以来最难的一次，想直接倒在地上，感觉有点中暑了。有了这次极限的经验，以后半马应该也没问题。</p><img src="/images/5271.jpg" width = "60%">]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;只要还没停下，就还没有输&quot;&gt;&lt;a href=&quot;#只要还没停下，就还没有输&quot; class=&quot;headerlink&quot; title=&quot;只要还没停下，就还没有输&quot;&gt;&lt;/a&gt;只要还没停下，就还没有输&lt;/h2&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://aaaxiaoka.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="运动" scheme="http://aaaxiaoka.github.io/tags/%E8%BF%90%E5%8A%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优雅避免奇偶情况划分</title>
+    <link href="http://aaaxiaoka.github.io/12/23/"/>
+    <id>http://aaaxiaoka.github.io/12/23/</id>
+    <published>2023-05-27T04:21:22.000Z</published>
+    <updated>2023-05-27T04:21:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>遇到数组长度要分奇偶进行分别计算的时候，总觉得不够优雅，今天看题解有奇偶通用得方法，记录一下。</p><span id="more"></span><h2 id="奇偶划分的通用办法"><a href="#奇偶划分的通用办法" class="headerlink" title="奇偶划分的通用办法"></a>奇偶划分的通用办法</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int left = (len + 1) / 2;</span><br><span class="line">int right = (len + 2) / 2;</span><br><span class="line">int mid = (left+right) / 2;</span><br></pre></td></tr></table></figure><p>记录左侧与右侧，如果是奇数的话，left和right是相同的中间项，如果是偶数的话，left和right是中间的两项。</p><p>看起来就很爽。</p><img src="/images/bkg/bk2.jpg" width="50%">]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;遇到数组长度要分奇偶进行分别计算的时候，总觉得不够优雅，今天看题解有奇偶通用得方法，记录一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://aaaxiaoka.github.io/categories/leetcode/"/>
+    
+    
+    <category term="code" scheme="http://aaaxiaoka.github.io/tags/code/"/>
+    
+  </entry>
   
   <entry>
     <title>BFS</title>

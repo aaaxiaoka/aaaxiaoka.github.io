@@ -1,3 +1,5 @@
+http://aaaxiaoka.github.io/527%E8%B7%91%E6%AD%A5/
+http://aaaxiaoka.github.io/12/23/
 http://aaaxiaoka.github.io/gallery/bkg/index.html
 http://aaaxiaoka.github.io/gallery/index.html
 http://aaaxiaoka.github.io/bfs/
@@ -7,5 +9,8 @@ http://aaaxiaoka.github.io/hexo-next/
 http://aaaxiaoka.github.io/
 http://aaaxiaoka.github.io/tags/first-commit/
 http://aaaxiaoka.github.io/tags/code/
+http://aaaxiaoka.github.io/tags/%E8%BF%90%E5%8A%A8/
 http://aaaxiaoka.github.io/categories/first-commit/
 http://aaaxiaoka.github.io/categories/LeetCode/
+http://aaaxiaoka.github.io/categories/leetcode/
+http://aaaxiaoka.github.io/categories/%E7%94%9F%E6%B4%BB/
